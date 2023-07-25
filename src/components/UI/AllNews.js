@@ -59,7 +59,11 @@ function AllNews({ allNews }) {
                 </span>
               </p>
 
-              <p style={{ fontSize: "20px" }}>{news.description}</p>
+              <p style={{ fontSize: "20px" }}>
+                {news?.description.length > 100
+                  ? news?.description.slice(0, 70) + "..."
+                  : news?.description}
+              </p>
 
               <Link href={`/news/${news?.id}`}>
                 <Button type="primary">
