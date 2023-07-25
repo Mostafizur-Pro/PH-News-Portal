@@ -10,7 +10,7 @@
     "json-server": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
-    "antd": "^5.6.1",
+    "antd": "^5.7.3",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
     "json-server": "^0.17.3",
