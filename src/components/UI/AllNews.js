@@ -7,13 +7,7 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
-// import Link from "next/link";
-
-// const contentStyle = {
-//   height: "200px",
-//   width: "200 px",
-//   color: "#000",
-// };
+import Link from "next/link";
 
 function AllNews({ allNews }) {
   console.log(allNews);
@@ -58,7 +52,7 @@ function AllNews({ allNews }) {
                   <CalendarOutlined /> {news.release_date}
                 </span>
                 <span>
-                  <CommentOutlined /> {news.comment_count}
+                  <CommentOutlined /> {news.comment_count} Comments
                 </span>
                 <span>
                   <ProfileOutlined /> {news.category}
@@ -67,9 +61,11 @@ function AllNews({ allNews }) {
 
               <p style={{ fontSize: "20px" }}>{news.description}</p>
 
-              <Button type="primary">
-                Keep Reading <ArrowRightOutlined />
-              </Button>
+              <Link href={`/news/${news?.id}`}>
+                <Button type="primary">
+                  Keep Reading <ArrowRightOutlined />
+                </Button>
+              </Link>
             </Col>
           </>
         ))}
