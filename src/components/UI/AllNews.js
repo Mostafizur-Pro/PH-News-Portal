@@ -14,7 +14,7 @@ function AllNews({ allNews }) {
   return (
     <>
       <Row gutter={16}>
-        {allNews.map((news) => (
+        {allNews?.map((news) => (
           <>
             {/* <Col style={contentStyle}>
               <Image src={news.image_url} fill alt="drawing_image" />
