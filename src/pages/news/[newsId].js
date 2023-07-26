@@ -8,6 +8,10 @@ import {
 } from "@ant-design/icons";
 
 function NewsDetailPage({ news }) {
+  if (!news) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div>
       <Row
