@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import styles from "@/styles/Create.module.css";
+import RootLayout from "@/components/Layouts/RootLayout";
 
 const CreateNews = () => {
   const { register, handleSubmit } = useForm();
@@ -70,3 +71,11 @@ const CreateNews = () => {
 };
 
 export default CreateNews;
+
+// HomePage.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
+
+CreateNews.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
